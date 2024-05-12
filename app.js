@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.port || 5000;
+
 const mongoose = require("mongoose");
 const { mongoUrl } = require("./keys");
 const cors = require("cors");
@@ -14,6 +14,8 @@ const io = require("socket.io")(http, {
   },
 });
 const path = require("path")
+const port = process.env.port || 8000;
+
 
 app.use(cors());
 
@@ -45,9 +47,9 @@ io.on("connection", (socket) => {
 });
 
 //serving the frontend
-app.use(express.static(path.join(__dirname, "./frontend/build")))
+app.use(express.static(path.join(__dirname, "/frontend/build")))
 app.get("*",(req,res)=>{
-  res.sendFile(path.join(__dirname, "./frontend/build/index.html"),
+  res.sendFile(path.join(__dirname, "/frontend/build/index.html"),
   function (err){
     res.status(500).send(err)
   }
