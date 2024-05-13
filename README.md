@@ -2,9 +2,7 @@
 
 The Gram is an social media app that aims to offer users a dynamic platform for posting photo and videos, following friends, liking and commenting on posts, and private messaging. 
 This app is built using React for the frontend and Node.js for the backend. The app is deployed on Render for easy and scalable hosting.
-
 ![THE GRAM](https://res.cloudinary.com/gauravcoder111/image/upload/e_background_removal/f_png/v1715623910/Gram_qxqwvu.png)
-
 ## Features
 • User Accounts: Allow users to sign up and sign in using their e-mail IDs and password for simplicity, and user shuold be able to forget their paasword.
 
