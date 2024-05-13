@@ -60,7 +60,7 @@ a {
     .nav-mobile {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .navbar {
@@ -76,4 +76,13 @@ a {
         margin: 0;
         padding: 10px 0px;
     }
+
+    li {
+        padding: 1px 5px;
+    }
+
+    a {
+        font-size: 8px;
+    }
+
 }
