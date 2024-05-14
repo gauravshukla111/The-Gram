@@ -1,6 +1,6 @@
 # THE GRAM - SOCIAL MEDIA APPLICATION
 
-The Gram is an social media app that aims to offer users a dynamic platform for posting photo and videos, following friends, liking and commenting on posts, and private messaging. 
+The Gram is a social media application that aims to offer users a dynamic platform for posting photo and videos, following friends, liking and commenting on posts, and private messaging. 
 This app is built using React for the frontend and Node.js for the backend. The app is deployed on Render for easy and scalable hosting.
 
 ![THE GRAM](https://res.cloudinary.com/gauravcoder111/image/upload/e_background_removal/f_png/v1715623910/Gram_qxqwvu.png)
@@ -72,6 +72,9 @@ To deploy this project run
 ```bash
   Render deploy
 ```
+
+## Render Deployment Link
+[The Gram link](https://the-gram-pkob.onrender.com)
 
 
 ## Env Variables
