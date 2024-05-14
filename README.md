@@ -94,11 +94,11 @@ password=
 ,
 socketId=
 ,
-CLOUDINARY_NAME=
+cloudinary_name=
 ,
 mongoDb=
 ,
-netlify=
+react_toastify=
 ,
 
 _fill each filed with your info respectively_
