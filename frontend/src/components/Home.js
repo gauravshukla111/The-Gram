@@ -15,8 +15,7 @@ export default function Home() {
     const [comment, setComment] = useState("");
     const [show, setShow] = useState(false);
     const [item, setItem] = useState([])
-    let limit = 10
-    let skip = 0
+    
 
 
     //toast function
@@ -28,35 +27,20 @@ export default function Home() {
         if (!token) {
             navigate("./signup")
         }
-        fetchPosts() 
 
-        window.addEventListener("scroll",handleScroll)
-        return () => {
-            window.removeEventListener("scroll",handleScroll)
-        }   
-       
-    }, [])
-
-    const fetchPosts = ()=>{
         //    Fetching all posts
-    fetch(`/allpost?limit=${limit}&skip=${skip}`, {
+    fetch("/allpost", {
         headers: {
             "Authorization": "Bearer " + localStorage.getItem("jwt")
         },
     }).then((res) => res.json())
-        .then((result) => {
+      .then((result) => {
             console.log(result)
-            setData((data)=>[...data, ...result]);
+            setData(result);
         })
         .catch((err) => console.log(err))
-    }
+    }, [])
 
-    const handleScroll = ()=>{
-        if(document.documentElement.clientHeight + window.pageYOffset >= document.documentElement.scrollHeight){
-             skip = skip + 10
-             fetchPosts()
-        }
-    }
 
     //to show and hide comments
     const toggleComment = (posts) => {
